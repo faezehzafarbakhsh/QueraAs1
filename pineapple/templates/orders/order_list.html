@@ -4,4 +4,10 @@
 {% block title %}لیست سفارشات{% endblock title %}
 
 <!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+{% for order in orders %}
+{{ order.customer_name }}
+{{ order.seller_name }}
+{{ order.weight }}
+{{ order.final_price }}
+{% endblock content %}
