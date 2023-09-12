@@ -2,7 +2,20 @@
 {% load static %}
 
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
+{% block title %}آناناس های فروشنده{% endblock title %}
 
 <!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+
+کد گواهی فروشنده: {{ seller.certificate_code }} <br>
+
+{% for p in pineapples %}
+
+{% if p.seller == seller %}
+قیمت: {{ p.price_toman }} <br>
+{% endif %}
+
+{% endfor %}
+
+
+{% endblock content %}

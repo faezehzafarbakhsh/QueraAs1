@@ -6,10 +6,10 @@ from pineapple.models import Subscription, Seller, Pineapple, Order, Comment
 class TemplateTestCase(TestCase):
     def setUp(self) -> None:
         # Create test data for the models
-        self.seller = Seller.objects.create(
-            name="TestSeller",
+        self.seller2 = Seller.objects.create(
+            name="TestSeller2",
             address="29334 Hester Ranch Address",
-            certificate_code="123456"
+            certificate_code="4569"
         )
         
         self.pineapple = Pineapple.objects.create(
