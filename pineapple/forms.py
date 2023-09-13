@@ -19,7 +19,7 @@ class SubscriptionForm(forms.ModelForm):
         phone_number = self.cleaned_data.get('phone_number')
         phone_re=r'^09\d{9}$'
         if not re.match(phone_re,phone_number):
-            raise forms.ValidationError("شماره تلفن اشتباه است. شماره تلفن باید ۱۱ رقم باشد و با ۰۹ شروع شود.")
+            raise ValidationError("شماره تلفن اشتباه است. شماره تلفن باید ۱۱ رقم باشد و با ۰۹ شروع شود.")
         return phone_number
             
         
