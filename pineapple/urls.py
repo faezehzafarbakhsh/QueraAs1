@@ -7,6 +7,10 @@ app_name = "pineapple"
 
 urlpatterns = [
 
+    # subscription
+    path('subscription-create/', views.subscription_create_view, name='subscription-create'),
+    path('subscription-list/', views.subscription_list_view, name='subscription-list'),
+
     # comment
     path('comment-create/', views.comment_create_view, name='comment-create'),
     path('seller-comment-list/<str:certificate_code>/', views.seller_comment_list_view, name='seller-comment-list'),
