@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 app_name = "pineapple"
 
+# orders
 urlpatterns = [
     path('orders/', views.order_list_view, name='order-list'),
     path('orders/<int:pk>/', views.order_detail_view, name='order-detail'),
