@@ -6,8 +6,10 @@
 
 <!-- Add your Content Here -->
 {% block content %}
-{{ order.customer_name }}
-{{ order.seller_name }}
-{{ order.weight }}
-{{ order.final_price }}
+نام سفارش‌دهنده:{{ order.name }} <br>
+نام فروشنده:{{ order.pineapple.seller.name }} <br>
+وزن کالا:{{ order.weight_kg }} <br>
+قیمت نهایی کالا: {% widthratio order.pineapple.price_toman 1 order.weight_kg %} <br>
+
 {% endblock content %}
+
