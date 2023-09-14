@@ -58,7 +58,7 @@ class OrderForm(forms.ModelForm):
     def clean_weight_kg(self):
         weight = self.cleaned_data.get('weight_kg')
         if weight > 100:
-            raise ValidationError('شما تنها می‌توانید حداکثر 100 کیلوگرم آناناس سفارش دهید.')
+            raise ValidationError('۱۰۰ کیلو آناناس میخوای چیکار؟ مشکل داری؟')
         return weight
 
 
