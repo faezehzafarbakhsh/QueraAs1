@@ -1,6 +1,6 @@
+from . import models
 from django import forms
 from django.core.exceptions import ValidationError
-from .models import *
 
 
 class SellerForm:
@@ -10,7 +10,7 @@ class SellerForm:
 class PineappleForm(forms.ModelForm):
 
     class Meta:
-        model = Pineapple
+        model = models.Pineapple
         fields = ['price_toman', 'seller']
 
     def clean_price_toman(self):
