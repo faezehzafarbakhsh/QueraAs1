@@ -6,9 +6,9 @@
 
 
 {% block content %}
-<form action="{% url 'pineapple:seller-create' %}" method="post">
-    {{form.as_p}}
-    {% csrf_token %}
-    <button type="submit">ثبت نام</button>
-</form>
+    <form action="{% url 'pineapple:seller-create' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ثبت نام</button>
+    </form>
 {% endblock content %}

@@ -6,14 +6,9 @@
 
 <!-- Add your Content Here -->
 {% block content %}
-
-کد گواهی فروشنده: {{ seller.certificate_code }} <br>
-
-{% for p in pineapples %}
-
-قیمت: {{ p.price_toman }} <br>
-
-{% endfor %}
-
+    کد گواهی فروشنده: {{ seller.certificate_code }} <br>
+    {% for p in pineapples %}
+        قیمت: {{ p.price_toman }} <br>
+    {% endfor %}
 
 {% endblock content %}
