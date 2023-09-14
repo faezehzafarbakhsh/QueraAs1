@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 app_name = "pineapple"
 
 urlpatterns = [
+    # seller
     path('seller-list/' , views.seller_list_view , name='seller-list'),
     path('seller-detail/<str:certificate_code>/' , views.seller_detail_view, name='seller-detail'),
     path('seller-create/', views.seller_create_view, name='seller-create'),
