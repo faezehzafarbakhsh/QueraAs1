@@ -7,6 +7,12 @@ app_name = "pineapple"
 
 urlpatterns = [
   
+    # orders
+    path('orders/', views.order_list_view, name='order-list'),
+    path('orders/<int:pk>/', views.order_detail_view, name='order-detail'),
+    path('order-create/', views.order_create_view, name='order-create'),
+    path('orders/<int:pk>/update/', views.order_update_view, name='order-update'),
+  
     # seller
     path('seller-list/' , views.seller_list_view , name='seller-list'),
     path('seller-detail/<str:certificate_code>/' , views.seller_detail_view, name='seller-detail'),

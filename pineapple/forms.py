@@ -38,9 +38,19 @@ class PineappleForm(forms.ModelForm):
             raise ValidationError('قیمت نباید از یک میلیون تومان بیشتر باشد.')
 
         return price
+    
 
-class OrderForm:
-    pass
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = models.Order
+        fields = ['pineapple', 'name', 'weight_kg']
+
+    def clean_weight_kg(self):
+        weight = self.cleaned_data.get('weight_kg')
+        if weight > 100:
+            raise ValidationError('شما تنها می‌توانید حداکثر 100 کیلوگرم آناناس سفارش دهید.')
+        return weight
+
 
   
 class SubscriptionForm(forms.ModelForm):
