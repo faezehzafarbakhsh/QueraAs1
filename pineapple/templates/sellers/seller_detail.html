@@ -2,7 +2,15 @@
 {% load static %}
 
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
+{% block title %}صفحه تکی فروشنده{% endblock title %}
 
-<!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+
+{% block content %}
+
+نام آناناس فروشان : {{seller.name}} <br>
+کد گواهی کسب : {{seller.certificate_code}} <br>
+آدرس کامل فروشنده : {{seller.address}} <br>
+
+
+
+{% endblock content %}
