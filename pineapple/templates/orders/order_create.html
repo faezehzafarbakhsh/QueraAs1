@@ -4,7 +4,7 @@
 {% block title %}ثبت سفارش{% endblock title %}
 
 {% block content %}
-    <form method="POST" action="{% url 'pineapple:order-create' %}" >
+    <form method="POST" action="{% url 'pineapple:order-create' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">ثبت سفارش</button>

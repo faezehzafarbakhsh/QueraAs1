@@ -2,17 +2,16 @@
 {% load static %}
 
 {% block title %}
-ثبت نام در خبرنامه
+    ثبت نام در خبرنامه
 {% endblock title %}
 
 <!-- Add your Content Here -->
 {% block content %}
 
 
-<form action="{% url  'pineapple:subscription-create'   %}"  method="post">
-  {{ form.as_p }}
-  {% csrf_token %}
-
-  <button type="submit">ثبت نام</button>
-</form>
+    <form action="{% url  'pineapple:subscription-create' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ثبت نام</button>
+    </form>
 {% endblock content %}

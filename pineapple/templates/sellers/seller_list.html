@@ -6,13 +6,13 @@
 
 
 {% block content %}
-{% for seller in sellers %}
+    {% for seller in sellers %}
 
-نام آناناس فروشان : {{seller.name}} <br>
-کد گواهی کسب : {{seller.certificate_code}} <br>
-آدرس فروشندگان : {{seller.address | truncatechars:20}} <br> <br>
+        نام آناناس فروشان : {{ seller.name }} <br>
+        کد گواهی کسب : {{ seller.certificate_code }} <br>
+        آدرس فروشندگان : {{ seller.address | truncatechars:20 }} <br> <br>
 
-{% endfor %}
+    {% endfor %}
 {% endblock content %}
 
 
