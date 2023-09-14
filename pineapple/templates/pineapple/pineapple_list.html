@@ -3,7 +3,17 @@
 
 
 
-{% block title %}<!-- Add your Title Here -->{% endblock title %}
+{% block title %}آناناس فروشی آقای زحمتکش{% endblock title %}
 
 <!-- Add your Content Here -->
-{% block content %}{% endblock content %}
+{% block content %}
+
+{% for p in pineapples %}
+
+قیمت : {{ p.price_toman }} <br>
+کد گواهی فروشنده : {{ p.seller.certificate_code }} <br> <br>
+
+
+{%endfor%}
+
+{% endblock content %}
