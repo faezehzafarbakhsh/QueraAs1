@@ -5,8 +5,8 @@ from django.conf.urls.static import static
 
 app_name = "pineapple"
 
-# orders
 urlpatterns = [
+    # orders
     path('orders/', views.order_list_view, name='order-list'),
     path('orders/<int:pk>/', views.order_detail_view, name='order-detail'),
     path('order-create/', views.order_create_view, name='order-create'),
