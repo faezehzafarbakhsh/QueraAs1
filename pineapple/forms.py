@@ -2,10 +2,8 @@ from . import models
 from django import forms
 from django.core.exceptions import ValidationError
 
-
 class SellerForm:
     pass
-
 
 class PineappleForm(forms.ModelForm):
 
@@ -22,14 +20,11 @@ class PineappleForm(forms.ModelForm):
 
         return price
 
-
 class OrderForm:
     pass
 
-
 class SubscriptionForm:
     pass
-
 
 class CommentForm:
     pass
