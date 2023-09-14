@@ -6,5 +6,9 @@
 
 <!-- Add your Content Here -->
 {% block content %}
-{{form.as_p}}
+    <form method="POST" action="{% url 'pineapple:order-update' order.pk  %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ثبت سفارش</button>
+    </form>
 {% endblock content %}
