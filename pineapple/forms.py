@@ -1,11 +1,11 @@
-from typing import Any
+from . import models
 from django import forms
 from django.core.exceptions import ValidationError
-from .models import *
+
 
 class SellerForm(forms.ModelForm):
     class Meta:
-        model = Seller
+        model = models.Seller
         fields = ['name' , 'address', 'certificate_code']
         
     def clean_address(self):
@@ -18,7 +18,7 @@ class SellerForm(forms.ModelForm):
     def clean_certificate_code(self):
         certificate_code = self.cleaned_data.get('certificate_code')
         
-        if certificate_code.isupper() == False:
+        if not certificate_code.isupper():
             raise ValidationError('حروف گواهینامه باید حروف بزرگ باشد.')
         return certificate_code
     
