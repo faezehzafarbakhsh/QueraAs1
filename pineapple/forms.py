@@ -1,6 +1,7 @@
+from . import models
 from django import forms
 from django.core.exceptions import ValidationError
-from .models import *
+
 
 class SellerForm:
     pass
@@ -16,7 +17,7 @@ class SubscriptionForm:
 
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = models.Comment
         fields = ['text','name','seller']
 
     def clean_text(self):

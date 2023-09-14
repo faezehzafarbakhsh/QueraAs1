@@ -6,8 +6,9 @@ from django.conf.urls.static import static
 app_name = "pineapple"
 
 urlpatterns = [
+    # comment
     path('comment-create/', views.comment_create_view, name='comment-create'),
-    path('seller-comment-list/<slug:certificate_code>/', views.seller_comment_list_view, name='seller-comment-list')
+    path('seller-comment-list/<str:certificate_code>/', views.seller_comment_list_view, name='seller-comment-list')
 ]
 
 if settings.DEBUG:
