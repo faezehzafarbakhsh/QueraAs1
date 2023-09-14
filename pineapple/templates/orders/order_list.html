@@ -9,7 +9,7 @@
         نام سفارش‌دهنده: {{ order.name }} <br>
         نام فروشنده: {{ order.pineapple.seller.name }} <br>
         وزرن کالا: {{ order.weight_kg }} <br>
-        قیمت نهایی کالا: {% widthratio order.pineapple.price_toman 1 order.weight_kg %} <br>
+        قیمت نهایی کالا: {% widthratio order.weight_kg 1 order.pineapple.price_toman %} <br>
 
     {% endfor %}
 {% endblock content %}
