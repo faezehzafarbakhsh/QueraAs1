@@ -10,7 +10,7 @@
 
 نام آناناس فروشان : {{seller.name}} <br>
 کد گواهی کسب : {{seller.certificate_code}} <br>
-آدرس فروشندگان : {{seller.address | slice : ":20"}} <br>
+آدرس فروشندگان : {{seller.address | truncatechars:20}} <br> <br>
 
 {% endfor %}
 {% endblock content %}
