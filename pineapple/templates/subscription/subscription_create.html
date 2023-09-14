@@ -9,7 +9,7 @@
 {% block content %}
 
 <h2>ثبت نام در خبرنامه</h2>
-<form action={% url  'pineapple:subscription-create'   %} method="post">
+<form action="{% url  'pineapple:subscription-create'   %}"  method="post">
   {{ form.as_p }}
   {% csrf_token %}
 
