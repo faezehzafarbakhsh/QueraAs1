@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 app_name = "pineapple"
 
 urlpatterns = [
-     # subscription
+    # subscription
     path('subscription-create/', views.subscription_create_view, name='subscription-create'),
     path('subscription-list/', views.subscription_list_view, name='subscription-list'),
     

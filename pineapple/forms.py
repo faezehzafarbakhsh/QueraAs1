@@ -1,8 +1,8 @@
 import re
-from django import forms
 from . import models
-from .models import Subscription
+from django import forms
 from django.core.exceptions import ValidationError
+
 class SellerForm:
     pass
 
@@ -14,7 +14,7 @@ class OrderForm:
 
 class SubscriptionForm(forms.ModelForm):
     class Meta:
-        model = Subscription
+        model =models.Subscription
         fields=['name','phone_number']
     def clean_phone_number(self):
         phone_number = self.cleaned_data.get('phone_number')
